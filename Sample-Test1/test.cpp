@@ -21,3 +21,7 @@ TEST_F(PrimeFactorFixture, Op3) {
 	expected = {3};
 	EXPECT_EQ(expected, primeFactor.op(3));
 }
+TEST_F(PrimeFactorFixture, Op4) {
+	expected = {2, 2};
+	EXPECT_EQ(expected, primeFactor.op(4));
+}
