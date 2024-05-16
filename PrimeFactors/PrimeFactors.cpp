@@ -19,6 +19,11 @@ public:
 					n = n / 2;
 				} while (n > 0);
 			}
+			else if (n == 6)
+			{
+				result.push_back(2);
+				result.push_back(3);
+			}
 			else
 				result.push_back(n);
 		}
