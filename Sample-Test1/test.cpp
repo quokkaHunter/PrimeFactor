@@ -2,13 +2,18 @@
 #include "../PrimeFactors/PrimeFactors.cpp"
 #include <vector>
 
-TEST(PrimeFactor, Op1) {
+class PrimeFactorFixture : public testing::Test
+{
+public:
 	PrimeFactor primeFactor;
 	vector<int> expected = {};
+};
+
+TEST_F(PrimeFactorFixture, Op1) {
+	expected = {};
 	EXPECT_EQ(expected, primeFactor.op(1));
 }
-TEST(PrimeFactor, Op2) {
-	PrimeFactor primeFactor;
-	vector<int> expected = {2};
+TEST_F(PrimeFactorFixture, Op2) {
+	expected = {2};
 	EXPECT_EQ(expected, primeFactor.op(2));
 }
