@@ -29,3 +29,11 @@ TEST_F(PrimeFactorFixture, Op5) {
 	expected = { 2, 3 };
 	EXPECT_EQ(expected, primeFactor.op(6));
 }
+TEST_F(PrimeFactorFixture, Op6) {
+	expected = { 2, 5 };
+	EXPECT_EQ(expected, primeFactor.op(10));
+}
+TEST_F(PrimeFactorFixture, Op7) {
+	expected = { 5, 7 };
+	EXPECT_EQ(expected, primeFactor.op(35));
+}
