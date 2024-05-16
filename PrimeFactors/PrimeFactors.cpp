@@ -8,24 +8,19 @@ public:
 	vector<int> op(int n)
 	{
 		vector<int> result = {};
-		if (n > 1)
+
+		if (n < 2)
+			return result;
+
+		while (n % 2 == 0)
 		{
-			if (n == 4)
-			{
-				do
-				{
-					if (n % 2 == 0)
-						result.push_back(2);
-					n = n / 2;
-				} while (n > 0);
-			}
-			else if (n == 6)
-			{
-				result.push_back(2);
-				result.push_back(3);
-			}
-			else
-				result.push_back(n);
+			result.push_back(2);
+			n /= 2;
+		}
+		while (n % 3 == 0)
+		{
+			result.push_back(3);
+			n /= 3;
 		}
 		return result;
 	}
